@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-23 01:55:10 pm"/>
+        <attribute name="created" value="TGVub3ZvO0RFU0tUT1AtUjRVTDVMVTsyMDIxLTEwLTIyOzExOjM2OjIwIHBtOzMwNTA="/>
+        <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtUjRVTDVMVTsyMDIxLTEwLTIzOzAxOjU1OjEwIHBtOzQ7MzE2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="RND, guess, ATT, WIN" type="Integer" array="False" size=""/>
+            <assign variable="RND" expression="random(100)"/>
+            <assign variable="WIN" expression="0"/>
+            <assign variable="ATT" expression="0"/>
+            <output expression="&quot;Oyuna hos geldiniz, 0 ile 100 arasindaki bir sayiyi tutturabilmek icin 5 giris hakkiniz var. Bol sanslar.&quot;" newline="True"/>
+            <while expression="ATT&lt;5">
+                <input variable="guess"/>
+                <if expression="guess=RND">
+                    <then>
+                        <assign variable="ATT" expression="6"/>
+                        <assign variable="WIN" expression="1"/>
+                    </then>
+                    <else>
+                        <if expression="guess&gt;RND">
+                            <then>
+                                <output expression="&quot;buyuk girdiniz&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;kucuk girdiniz&quot;" newline="True"/>
+                            </else>
+                        </if>
+                        <assign variable="ATT" expression="ATT+1"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="WIN=1">
+                <then>
+                    <output expression="&quot;Tebrikler! Kazandiniz! :)&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Giris hakkiniz kalmadi, Kaybettiniz :(&quot;" newline="True"/>
+                    <output expression="&quot;Tutturamadiginiz sayi: &quot; &amp; tostring(RND)" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
