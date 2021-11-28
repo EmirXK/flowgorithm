@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-28 04:09:10 am"/>
+        <attribute name="created" value="TGVub3ZvO0RFU0tUT1AtUjRVTDVMVTsyMDIxLTExLTI3OzA4OjM1OjI4IHBtOzMwNjk="/>
+        <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtUjRVTDVMVTsyMDIxLTExLTI4OzA0OjA5OjEwIGFtOzE7MzE1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, save" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="5"/>
+            <assign variable="y" expression="1"/>
+            <while expression="x&lt;15000">
+                <assign variable="y" expression="1"/>
+                <assign variable="save" expression="0"/>
+                <while expression="y&lt;x">
+                    <if expression="x%y=0">
+                        <then>
+                            <assign variable="save" expression="save+y"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="y" expression="y+1"/>
+                </while>
+                <if expression="save=x">
+                    <then>
+                        <output expression="x" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="x" expression="x+1"/>
+            </while>
+            <output expression="&quot;end&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
